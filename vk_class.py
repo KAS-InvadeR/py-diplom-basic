@@ -14,9 +14,3 @@ class VK:
         params = {'owner_id': id_user_photo, 'album_id': album_id, 'extended': '1', 'photo_sizes': '1', 'count': count}
         response = requests.get(url, params={**self.params, **params})
         return response.json()
-
-# def users_info(self):
-#     url = 'https://api.vk.com/method/users.get'
-#     params = {'user_ids': self.id}
-#     response = requests.get(url, params={**self.params, **params})
-#     return response.json()
